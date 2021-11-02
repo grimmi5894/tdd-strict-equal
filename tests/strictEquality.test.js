@@ -12,5 +12,13 @@ describe('strictEquality', () => {
 
       expect(result).to.equal(true)
     })
+
+    it('returns false if parameters are of same type but different value', () => {
+      const val1 = 10
+      const val2 = 5
+      const result = strictEqual(val1, val2)
+
+      expect(result).to.equal(false)
+    })
   })
 })
